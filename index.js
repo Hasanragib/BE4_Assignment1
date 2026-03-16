@@ -227,7 +227,7 @@ app.delete("/books/:bookId", async (req, res) => {
   try {
     const deleteBook = await deleteBookWithId(req.params.bookId);
     if (deleteBook) {
-      res.status(200).json({ error: "Book deleted successfully." });
+      res.status(200).json({ message: "Book deleted successfully." });
     } else {
       res.status(404).json({ error: "Book not found." });
     }
